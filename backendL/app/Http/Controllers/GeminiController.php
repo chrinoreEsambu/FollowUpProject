@@ -41,8 +41,8 @@ class GeminiController extends Controller
     // Appel de l'API Gemini
     private function callGeminiForExercise($data)
     {
-        $apiKey = 'AIzaSyAeV4v7iNGyK60r-ZAN-MMjV_pndLWvi-I';
-        $apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=$apiKey";
+        $apiKey = 'your Gemini API key';
+        $apiUrl = "your Gemini API Url";
         
         $prompt = "Voici les données utilisateur :
 
