@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Liste des Entraînements</h2>
+
+  <div *ngIf="workouts.length === 0" class="message">
+    <p>Aucun entraînement trouvé.</p>
+  </div>
+
+  <div class="workout-grid">
+    <div *ngFor="let workout of workouts" class="workout-card">
+      <h3>{{ workout.exerciseName }}</h3>
+      <p><strong>Date :</strong> {{ workout.date }}</p>
+      <p><strong>Durée :</strong> {{ workout.duration }} minutes</p>
+      <p><strong>Séries :</strong> {{ workout.sets }}</p>
+      <p><strong>Répétitions :</strong> {{ workout.reps }}</p>
+      <p><strong>Poids :</strong> {{ workout.weight }} kg</p>
+      <p><strong>Type :</strong> {{ workout.exerciseType }}</p>
+      <p><strong>Intensité :</strong> {{ workout.intensity }}</p>
+      <p><strong>Notes :</strong> {{ workout.notes }}</p>
+    </div>
+  </div>
+</div>

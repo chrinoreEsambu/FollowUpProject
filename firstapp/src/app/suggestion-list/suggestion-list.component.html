@@ -1,0 +1,40 @@
+<div style="padding: 16px; color: #fff">
+  <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 16px">
+    Suggestions d'exercices
+  </h2>
+
+  <ul *ngIf="suggestions.length > 0; else noData">
+    <li
+      *ngFor="let s of suggestions"
+      style="
+        margin-bottom: 8px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <span>{{ s.suggestion }}</span>
+      <label for="">{{ s.created_at | date : "dd/MM/yyyy HH:mm:ss" }}</label>
+      <button
+        (click)="deleteSuggestion(s.id)"
+        style="
+          background-color: red;
+          color: white;
+          border: none;
+          padding: 6px 12px;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        Supprimer
+      </button>
+    </li>
+  </ul>
+
+  <ng-template #noData>
+    <p>Aucune suggestion trouvée.</p>
+  </ng-template>
+</div>

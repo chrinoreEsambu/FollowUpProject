@@ -1,0 +1,101 @@
+<div class="followup-form-container">
+  <form class="followup-form" (ngSubmit)="onSubmit()">
+    <h2>Complétez votre suivi</h2>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="sleep-quality">Qualité du sommeil</label>
+        <select
+          id="sleep-quality"
+          name="sleepQuality"
+          [(ngModel)]="formData.sleepQuality"
+          required
+        >
+          <option value="" disabled selected>Choisir une qualité</option>
+          <option value="Bonne">Bonne</option>
+          <option value="Moyenne">Moyenne</option>
+          <option value="Mauvaise">Mauvaise</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="energy-level">Niveau d'énergie</label>
+        <select
+          id="energy-level"
+          name="energyLevel"
+          [(ngModel)]="formData.energyLevel"
+          required
+        >
+          <option value="" disabled selected>Choisir un niveau</option>
+          <option value="Élevé">Élevé</option>
+          <option value="Moyen">Moyen</option>
+          <option value="Bas">Bas</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mood">Humeur</label>
+        <select id="mood" name="mood" [(ngModel)]="formData.mood" required>
+          <option value="" disabled selected>Choisir une humeur</option>
+          <option value="Heureux">Heureux</option>
+          <option value="Neutre">Neutre</option>
+          <option value="Triste">Triste</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="goal">Objectif du jour</label>
+        <select
+          id="goal"
+          name="goal"
+          [(ngModel)]="formData.goal"
+          (change)="onGoalChange($event)"
+          required
+        >
+          <option value="" disabled selected>Choisir un objectif</option>
+          <option value="Sport">Faire du sport</option>
+          <option value="Travail">Travailler</option>
+          <option value="Loisir">Temps libre</option>
+          <option value="Autre">Autre (écrire ci-dessous)</option>
+        </select>
+        <input
+          *ngIf="formData.goal === 'Autre'"
+          type="text"
+          name="goalCustom"
+          [(ngModel)]="formData.goalCustom"
+          placeholder="Écrivez votre objectif ici"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="additional-comments">Commentaire additionnel</label>
+        <textarea
+          id="additional-comments"
+          name="additionalComments"
+          rows="4"
+          [(ngModel)]="formData.additionalComments"
+          placeholder="Ajoutez des informations supplémentaires (facultatif)"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="mood">Type d'exercice</label>
+        <input
+          type="text"
+          id="exerciseType"
+          name="exerciseType"
+          [(ngModel)]="formData.exerciseType"
+          required
+        />
+      </div>
+    </div>
+
+    <button type="submit">Envoyer</button>
+
+    <div *ngIf="isLoading" class="loader-container">
+      <div class="loader"></div>
+      <p class="spina">FollowCreat...</p>
+    </div>
+
+    <form *ngIf="!isLoading" (ngSubmit)="onSubmit()"></form>
+  </form>
+</div>

@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #1dfb13;
+    --text-color: #06090e;
+    --bg-color: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background: var(--bg-color);
+    text-align: center;
+    padding: 65px 0px;
+}
+.hero-text{
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    
+}
+.hero h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    font-weight: normal;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    /* color: #333; */
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hero-buttons button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    /* border: none; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn {
+    background-color: #CCE5FF;
+    color: #000000;
+    font-weight: bold;
+    border :1px solid #07EB06;
+}
+
+.contact-btn {
+    background-color: #000000;
+    color: #ffff;
+   border: none;
+}
+
+.signup-btn:hover {
+    background-color: #eaecee;
+}
+
+.contact-btn:hover {
+    color: #000000;
+    background-color: #28b463;
+}
+.copy{
+    font-size: 15px;
+    
+}
+
+.toggle{
+    display: flex;
+   font-size: 15px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+.alltoggle{
+    display: flex;
+    border:1px solid #fdfdfd73;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50px; 
+    width: 260px;
+}
+.toggle1{
+    border:1px solid #CCE5FF;
+    margin-left: 5px;
+    border-radius: 50px;
+    width: 8em;
+    color:#0063A4;
+    font-size: 15px;
+    background-color: #CCE5FF;
+}   
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0; 
+  }
+  
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-up {
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+  }
+  
+  .hero h1 {
+    animation-delay: 0.3s;
+  }
+  .hero h2 {
+    animation-delay: 0.5s;
+  }
+  .hero p {
+    animation-delay: 0.7s;
+  }
+  .hero-buttons {
+    animation-delay: 0.9s;
+  }
+  

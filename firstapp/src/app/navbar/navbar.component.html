@@ -1,0 +1,43 @@
+<header class="fade-slide">
+  <nav>
+    <div class="logo">
+      <img src="./assets/followup logo.png" alt="Logo" />
+    </div>
+
+    <ul class="nav-links">
+      <li><a (click)="getpage('/herobaner')">Acceuil</a></li>
+      <li><a (click)="getpage('/entrainement')">Entraînements</a></li>
+      <li><a (click)="getpage('/ajouter')">Ajouter</a></li>
+
+      <li class="dropdown">
+        <a>Props ▾</a>
+        <ul class="dropdown-menu">
+          <li><a (click)="getpage('/mood')">Up-check</a></li>
+          <li><a (click)="getpage('/suggestion-list')">Up-Props</a></li>
+          <li><a (click)="getpage('/parametres')">Paramètres</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button class="button-headerlog">
+        <a (click)="getpage('/login')">Login</a>
+      </button>
+      <button class="button-headersign">Sign Up</button>
+    </div>
+
+    <div class="nav-toggle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#000000"
+      >
+        <path
+          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+        />
+      </svg>
+    </div>
+  </nav>
+</header>
